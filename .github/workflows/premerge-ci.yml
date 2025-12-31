@@ -4,15 +4,12 @@ on:
   workflow_dispatch:
   merge_group:
     types: [checks_requested]
-  pull_request_target:
+  pull_request:
     types:
       - auto_merge_enabled
     branches:
       - main
       - develop
-  push:
-    branches:
-      - ci/pr-**
 
 env:
   REGION: us-west-2
